@@ -1,15 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ProductItem from './ProductItem';
-import Commerce from '../lib/commerce.js'
-
+import ProdutoItem from './ProdutoItem'
+import '../css/ProductList.css'
 const ProductsList = ({ products }) => {
 
 
     return (
         <div className="products" id="products">
             {products.map((product) => (
-                <ProductItem
+                <ProdutoItem
                     key={product.id}
                     product={product}
                 />

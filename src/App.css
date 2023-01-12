@@ -1,10 +1,10 @@
-.product__image {
-  height: 200x;
-  width: 200px;
-  background-color: red;
+body {
+  background-color: #E5E5E5;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+
 }
 
-.product__card {
-  display: flex;
-  flex-direction: row;
+.app {
+  margin-top: 50px;
 }

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import commerce from './lib/commerce';
 import ProductsList from './components/ProductList'
-const { REACT_APP_MY_ENV } = process.env;
 
+import './App.css'
 const App = () => {
 
   const [products, setProducts] = useState([]);

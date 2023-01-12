@@ -1,21 +1,24 @@
 import React, { Component } from "react";
-import Commerce from '../lib/commerce.js'
-import '../app.css'
+import '../css/ProdutoItem.css'
 import { stripHtml } from "string-strip-html";
+import stars from '../../public/stars.png'
 
 import PropTypes from 'prop-types';
 
 const ProdutoItem = ({ product }) => {
-    console.log(product)
+
 
     const { result } = stripHtml(product.description);
-    console.log(result)
+    console.log(product)
 
     return (
         <div className="product__card">
             <img className="product__image" src={product.image?.url} alt={product.name} />
+
             <div className="product__info">
+                <p className="product__category">{product.categories.map(slug => slug.slug)}</p>
                 <h4 className="product__name">{product.name}</h4>
+                <img className="product__rating" src={stars} />
                 <p className="product__description">
                     {/* product description stripped of html tags */}
                     {result}
